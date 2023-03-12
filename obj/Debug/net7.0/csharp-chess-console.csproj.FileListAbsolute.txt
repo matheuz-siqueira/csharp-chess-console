@@ -1,0 +1,15 @@
+/home/matheus/Projetos/csharp-chess-console/bin/Debug/net7.0/csharp-chess-console
+/home/matheus/Projetos/csharp-chess-console/bin/Debug/net7.0/csharp-chess-console.deps.json
+/home/matheus/Projetos/csharp-chess-console/bin/Debug/net7.0/csharp-chess-console.runtimeconfig.json
+/home/matheus/Projetos/csharp-chess-console/bin/Debug/net7.0/csharp-chess-console.dll
+/home/matheus/Projetos/csharp-chess-console/bin/Debug/net7.0/csharp-chess-console.pdb
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.csproj.AssemblyReference.cache
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.GeneratedMSBuildEditorConfig.editorconfig
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.AssemblyInfoInputs.cache
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.AssemblyInfo.cs
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.csproj.CoreCompileInputs.cache
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.dll
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/refint/csharp-chess-console.dll
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.pdb
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/csharp-chess-console.genruntimeconfig.cache
+/home/matheus/Projetos/csharp-chess-console/obj/Debug/net7.0/ref/csharp-chess-console.dll
