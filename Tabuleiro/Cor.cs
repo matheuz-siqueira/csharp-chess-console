@@ -1,6 +1,6 @@
 namespace Tabuleiro;
 public enum Cor : int 
 {
-    Blakc = 0, 
+    Black = 0, 
     White = 1
 }

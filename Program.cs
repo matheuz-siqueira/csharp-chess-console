@@ -6,9 +6,21 @@ class Program
 {
     static void Main(string[] args)
     {
-        PosicaoXadrez posicao = new PosicaoXadrez('c',7);
+        try{
+        Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Black), new Posicao(0, 0));
+        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Black), new Posicao(0, 7));
+        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Black), new Posicao(0, 4));
 
-        Console.WriteLine(posicao);
-        Console.WriteLine(posicao.ToPosicao());
+        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.White), new Posicao(7, 0));
+        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.White), new Posicao(7, 7));
+        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.White), new Posicao(7, 5));
+
+        Tela.ImprimirTabuleiro(tabuleiro);
+        }
+        catch(TabuleiroException e)
+        {
+            Console.WriteLine($"{e.Message}");
+        }
     }
 }
