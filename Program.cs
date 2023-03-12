@@ -6,17 +6,9 @@ class Program
 {
     static void Main(string[] args)
     {
-        try{
-        Tabuleiro tabuleiro = new Tabuleiro(8, 8);
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Blakc), new Posicao(0, 0));
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Blakc), new Posicao(0, 9));
-        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Blakc), new Posicao(0, 4));
+        PosicaoXadrez posicao = new PosicaoXadrez('c',7);
 
-        Tela.ImprimirTabuleiro(tabuleiro);
-        }
-        catch(TabuleiroException e)
-        {
-            Console.WriteLine($"{e.Message}");
-        }
+        Console.WriteLine(posicao);
+        Console.WriteLine(posicao.ToPosicao());
     }
 }
