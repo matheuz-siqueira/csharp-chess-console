@@ -7,16 +7,23 @@ class Program
     static void Main(string[] args)
     {
         try{
-        Tabuleiro tabuleiro = new Tabuleiro(8, 8);
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Black), new Posicao(0, 0));
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Black), new Posicao(0, 7));
-        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Black), new Posicao(0, 4));
+            Partida partida = new Partida();
 
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.White), new Posicao(7, 0));
-        tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.White), new Posicao(7, 7));
-        tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.White), new Posicao(7, 5));
+            while(!partida.Terminada)
+            {
+                Console.Clear();
+                Tela.ImprimirTabuleiro(partida.Tabuleiro);
+                Console.WriteLine();
 
-        Tela.ImprimirTabuleiro(tabuleiro);
+                Console.Write("Origem: ");
+                Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
+
+                Console.Write("Destino: ");
+                Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
+
+                partida.ExecutaMovimento(origem, destino);
+            }
+            
         }
         catch(TabuleiroException e)
         {
