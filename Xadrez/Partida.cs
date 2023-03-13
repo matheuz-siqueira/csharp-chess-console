@@ -20,7 +20,7 @@ public class Partida
     public void ExecutaMovimento(Posicao origem, Posicao destino)
     {
         Peca peca = Tabuleiro.RetirarPeca(origem);
-        peca.IncrementarQtdMovimentos();
+        
         Peca pecaCapturada = Tabuleiro.RetirarPeca(destino);
         Tabuleiro.ColocarPeca(peca, destino);
     }

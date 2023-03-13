@@ -18,6 +18,11 @@ class Program
                 Console.Write("Origem: ");
                 Posicao origem = Tela.LerPosicaoXadrez().ToPosicao();
 
+                bool[,] posicoesPossiveis = partida.Tabuleiro.Peca(origem).MovimentosPossiveis();
+
+                Console.Clear();
+                Tela.ImprimirTabuleiro(partida.Tabuleiro, posicoesPossiveis);
+
                 Console.Write("Destino: ");
                 Posicao destino = Tela.LerPosicaoXadrez().ToPosicao();
 
@@ -28,6 +33,10 @@ class Program
         catch(TabuleiroException e)
         {
             Console.WriteLine($"{e.Message}");
+        }
+        catch(Exception)
+        {
+            Console.WriteLine("Comando não interpretado.");
         }
     }
 }
