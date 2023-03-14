@@ -38,15 +38,13 @@ class Program
                     Console.ReadLine();
                 }
             }
+            Console.Clear();
+            Tela.ImprimirPartida(partida);
 
         }
         catch (TabuleiroException e)
         {
             Console.WriteLine($"{e.Message}");
-        }
-        catch (Exception)
-        {
-            Console.WriteLine("Comando não interpretado.");
         }
     }
 }
