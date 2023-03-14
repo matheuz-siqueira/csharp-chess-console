@@ -5,12 +5,12 @@ public class Tela
 {
     public static void ImprimirTabuleiro(Tabuleiro tabuleiro)
     {
-        for(int i = 0; i < tabuleiro.Linhas; i++)
+        for (int i = 0; i < tabuleiro.Linhas; i++)
         {
             Console.Write($"{8 - i} ");
-            for(int j =0; j < tabuleiro.Colunas; j++)
+            for (int j = 0; j < tabuleiro.Colunas; j++)
             {
-                ImprimirPeca(tabuleiro.Peca(i, j)); 
+                ImprimirPeca(tabuleiro.Peca(i, j));
             }
             Console.WriteLine();
         }
@@ -22,16 +22,16 @@ public class Tela
         ConsoleColor fundoOriginal = Console.BackgroundColor;
         ConsoleColor fundoAlteraldo = ConsoleColor.DarkGray;
 
-        for(int i = 0; i < tabuleiro.Linhas; i++)
+        for (int i = 0; i < tabuleiro.Linhas; i++)
         {
             Console.Write($"{8 - i} ");
-            for(int j =0; j < tabuleiro.Colunas; j++)
+            for (int j = 0; j < tabuleiro.Colunas; j++)
             {
-                if(posicoesPossiveis[i, j])
+                if (posicoesPossiveis[i, j])
                 {
                     Console.BackgroundColor = fundoAlteraldo;
                 }
-                else 
+                else
                 {
                     Console.BackgroundColor = fundoOriginal;
                 }
@@ -50,25 +50,26 @@ public class Tela
         char coluna = s[0];
         int linha = int.Parse(s[1] + "");
         return new PosicaoXadrez(coluna, linha);
-    } 
+    }
 
     public static void ImprimirPeca(Peca peca)
     {
         if (peca == null)
         {
             Console.Write("- ");
-        }else 
+        }
+        else
         {
-            if(peca.Cor == Cor.White)
+            if (peca.Cor == Cor.Branca)
             {
                 Console.Write(peca);
             }
-            else 
+            else
             {
-                ConsoleColor aux = Console.ForegroundColor; 
+                ConsoleColor aux = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write(peca);
-                Console.ForegroundColor = aux; 
+                Console.ForegroundColor = aux;
             }
             Console.Write(" ");
         }
